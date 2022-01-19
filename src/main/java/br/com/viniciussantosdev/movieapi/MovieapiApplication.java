@@ -1,4 +1,4 @@
-package br.com.movieapi.movieapi;
+package br.com.viniciussantosdev.movieapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
