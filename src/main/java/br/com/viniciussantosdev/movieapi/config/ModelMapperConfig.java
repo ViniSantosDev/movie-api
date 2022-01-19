@@ -1,4 +1,4 @@
-package br.com.movieapi.movieapi.config;
+package br.com.viniciussantosdev.movieapi.config;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

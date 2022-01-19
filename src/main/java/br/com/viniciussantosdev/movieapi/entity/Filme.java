@@ -1,4 +1,4 @@
-package br.com.movieapi.movieapi.entity;
+package br.com.viniciussantosdev.movieapi.entity;
 
 import java.util.Date;
 import java.util.Objects;

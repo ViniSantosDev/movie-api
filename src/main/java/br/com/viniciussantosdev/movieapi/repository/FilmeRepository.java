@@ -1,4 +1,4 @@
-package br.com.movieapi.movieapi.repository;
+package br.com.viniciussantosdev.movieapi.repository;
 
 import java.util.Date;
 
@@ -9,7 +9,7 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import br.com.movieapi.movieapi.entity.Filme;
+import br.com.viniciussantosdev.movieapi.entity.Filme;
 
 @Repository
 public interface FilmeRepository extends PagingAndSortingRepository<Filme, Long> {

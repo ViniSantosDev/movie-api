@@ -1,4 +1,4 @@
-package br.com.movieapi.movieapi.services;
+package br.com.viniciussantosdev.movieapi.services;
 
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -11,9 +11,9 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
-import br.com.movieapi.movieapi.dto.*;
-import br.com.movieapi.movieapi.entity.Filme;
-import br.com.movieapi.movieapi.repository.FilmeRepository;
+import br.com.viniciussantosdev.movieapi.dto.*;
+import br.com.viniciussantosdev.movieapi.entity.Filme;
+import br.com.viniciussantosdev.movieapi.repository.FilmeRepository;
 import javassist.NotFoundException;
 
 @Component
