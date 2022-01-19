@@ -1,4 +1,4 @@
-package br.com.movieapi.movieapi.controller;
+package br.com.viniciussantosdev.movieapi.controller;
 
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +13,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import br.com.movieapi.movieapi.dto.*;
-import br.com.movieapi.movieapi.services.FilmeServices;
+
+import br.com.viniciussantosdev.movieapi.dto.*;
+import br.com.viniciussantosdev.movieapi.services.FilmeServices;
 import javassist.NotFoundException;
 
 @RestController
