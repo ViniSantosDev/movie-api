@@ -1,4 +1,4 @@
-package br.com.movieapi.movieapi.dto;
+package br.com.viniciussantosdev.movieapi.dto;
 
 import java.util.Date;
 

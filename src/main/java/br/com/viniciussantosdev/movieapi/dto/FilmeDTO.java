@@ -1,10 +1,10 @@
-package br.com.movieapi.movieapi.dto;
+package br.com.viniciussantosdev.movieapi.dto;
 
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import br.com.movieapi.movieapi.entity.Filme;
+import br.com.viniciussantosdev.movieapi.entity.Filme;
 
 public class FilmeDTO {
 	private Long id;
