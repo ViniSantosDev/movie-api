@@ -1,5 +1,6 @@
 package br.com.viniciussantosdev.movieapi.dto;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -10,7 +11,7 @@ public class FilmeDTO {
 	private Long id;
 	private String nome;
 	private String categoria;
-	private Date dataLancamento;
+	private LocalDate dataLancamento;
 
 	public FilmeDTO() {
 
@@ -35,7 +36,7 @@ public class FilmeDTO {
 		return categoria;
 	}
 
-	public Date getDataLancamento() {
+	public LocalDate getDataLancamento() {
 		return dataLancamento;
 	}
 
@@ -51,7 +52,7 @@ public class FilmeDTO {
 		this.categoria = categoria;
 	}
 
-	public void setDataLancamento(Date dataLancamento) {
+	public void setDataLancamento(LocalDate dataLancamento) {
 		this.dataLancamento = dataLancamento;
 	}
 

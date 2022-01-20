@@ -131,10 +131,4 @@ public class FilmeServices {
 		return filmeDto;
 	}
 
-	public FilmeDTO createNewDTO(Filme filme) {
-		FilmeDTO filmeDTO = new FilmeDTO();
-		return filmeDTO;
-	}
-
 }
-

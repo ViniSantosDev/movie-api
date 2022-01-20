@@ -1,6 +1,6 @@
 package br.com.viniciussantosdev.movieapi.entity;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.Objects;
 
 import javax.persistence.Column;
@@ -21,7 +21,7 @@ public class Filme {
 	@Column(name = "categoria")
 	private String categoria;
 	@Column(name = "dataLancamento")
-	private Date dataLancamento;
+	private LocalDate dataLancamento;
 
 	@Override
 	public int hashCode() {
@@ -65,11 +65,11 @@ public class Filme {
 		this.categoria = categoria;
 	}
 
-	public Date getDataLancamento() {
+	public LocalDate getDataLancamento() {
 		return dataLancamento;
 	}
 
-	public void setDataLancamento(Date dataLancamento) {
+	public void setDataLancamento(LocalDate dataLancamento) {
 		this.dataLancamento = dataLancamento;
 	}
 

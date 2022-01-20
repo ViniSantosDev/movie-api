@@ -53,7 +53,7 @@ public class FilmeController {
 		}
 	}
 
-	@PostMapping
+	@PostMapping(value = "salvar")
 	public ResponseEntity<FilmeDTO> postFilmes(@RequestBody @Valid FilmeInsertDTO body) throws Exception {
 		try {
 			FilmeDTO result = filmeServices.postFilmes(body);
