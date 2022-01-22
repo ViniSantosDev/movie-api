@@ -9,39 +9,102 @@
 	rel="stylesheet"
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
 
 <title>Filmes</title>
 </head>
 <body>
-	<h3>Cadastrar Filme</h3>
-	
-		<div class="mb-3">
-		<label for="id" class="form-label">id</label> <input
-			type=text class="form-control" id="id"
-			placeholder="Informe o id" required="required">
-	</div>
+	<div class="main-page">
+		<div class="movieapp__header py-3">
+			<div class="text-center">
+				<h1 class="text-uppercase text-white fw-bold">Movie app</h1>
+			</div>
+		</div>
 
-	<div class="mb-3">
-		<label for="nome" class="form-label">Nome do filme</label> <input
-			type="text" class="form-control" id="nome"
-			placeholder="Informe o nome" required="required">
-	</div>
-	<div class="mb-3">
-		<label for="categoria" class="form-label">Categoria
-			do filme</label> <input type="text" class="form-control"
-			id="categoria" placeholder="Informe a categoria"
-			required="required">
-	</div>
-	<div class="mb-3">
-		<label for="dataLancamento" class="form-label">Data
-			de Lançamento do filme </label> <input type="date" class="form-control"
-			id="dataLancamento"
-			placeholder="Informe a data de Lançamento" required="required">
-	</div>
-	
-	</form>
-	<button type="button" class="btn btn-primary" onclick="salvarFilme()">Salvar</button>
+		<section class="cadastro-filme">
+			<div class="container pb-4">
+				<div class="cadastro-filme__box rounded d-block mx-auto">
+					<div class="cadastro-filme__header py-2 px-3 rounded-top d-flex align-items-center">
+						<h3 class="cadastro-filme__title fw-bold mb-0">Cadastrar filme</h3>
 
+						<div class="ms-auto">
+							<a href="" class="cadastro-filme__link--dark-blue">Voltar</a>
+						</div>
+					</div>
+					
+					<form class="cadastro-filme__form p-4">
+						<div class="row">
+							<div class="col-12 col-md-7">
+								<label for="nome" class="form-label">Nome do filme</label>
+								<div class="input-group mb-3">
+									<input
+										type="text" class="form-control" id="nome"
+										placeholder="Ex.: O Silêncio dos Inocentes" required="required">
+								</div>
+							</div>
+							
+							<div class="col-12 col-md-5">
+								<label for="id" class="form-label">ID</label> 
+								<div class=" input-group mb-3">
+									<input
+									type=text class="form-control" id="id"
+									placeholder="Ex.: 999999" required="required">
+								</div>
+							</div>
+	
+							<div class="col-12 col-md-6">
+								<label for="categoria" class="form-label">Categoria
+									do filme</label>
+								<div class="input-group mb-3">
+								<!-- <select class="form-select">
+										<option value="" selected>Informe a categoria</option>
+										<option value="">Ação</option>
+										<option value="">Anime</option>
+										<option value="">Aventura</option>
+										<option value="">Brasileiros</option>
+										<option value="">Clássicos</option>
+										<option value="">Comédia</option>
+										<option value="">Documentários</option>
+										<option value="">Drama</option>
+										<option value="">Esportes</option>
+										<option value="">Estrangeiros</option>
+										<option value="">Fantasia</option>
+										<option value="">Fé e Espiritualidade</option>
+										<option value="">Ficção Científica</option>
+										<option value="">Hollywood</option>
+										<option value="">Independentes</option>
+										<option value="">LGBTQ</option>
+										<option value="">Música e musicais</option>
+										<option value="">Policial</option>
+										<option value="">Romance</option>
+										<option value="">Suspense</option>
+										<option value="">Terror</option>
+									</select> Selection como sugestão -->
+										 <input type="text" class="form-control"
+										id="categoria" placeholder="Ex.: Drama"
+										required="required"> 
+								</div>
+							</div>
+	
+							<div class="col-12 col-md-6">
+								<label for="dataLancamento" class="form-label">Data
+									de Lançamento do filme </label>
+								<div class="input-group mb-3">
+									<input type="date" class="form-control"
+										id="dataLancamento"
+										placeholder="Informe a data de Lançamento" required="required">
+								</div>
+							</div>
+							
+							<div class="col-4 mx-auto mt-2">
+								<button type="button" class="btn btn-outline-mapp w-100" onclick="salvarFilme()">Salvar</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+	</div>
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -73,9 +136,6 @@
 
 		}
 	</script>
-
-
-
 
 </body>
 </html>
