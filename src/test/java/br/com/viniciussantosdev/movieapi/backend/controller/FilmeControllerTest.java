@@ -33,7 +33,7 @@ public class FilmeControllerTest extends BaseTest {
 	}
 
 	@Test
-	void esperarEncontrarFilmePorId() {
+	void esperaEncontrarFilmePorId() {
 
 		String pathFilme = path.toString() + ID;
 
@@ -45,6 +45,18 @@ public class FilmeControllerTest extends BaseTest {
 		Filme filme = filmeRepository.findById(ID).get();
 		assertEquals(ID, filme.getId());
 		assertEquals(HttpStatus.OK, response.getStatusCode());
+	}
+
+	@Test
+	void esperaNaoEncontrarEndpointDeFilme() {
+		path.append("xxx");
+
+		ParameterizedTypeReference<FilmeDTO> responseType = new ParameterizedTypeReference<>() {
+		};
+		ResponseEntity<FilmeDTO> response = this.restTemplate.exchange(path.toString(), HttpMethod.GET, null,
+				responseType);
+
+		assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
 
 	}
 
