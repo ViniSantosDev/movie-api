@@ -11,7 +11,6 @@ public class FilmeDTO {
 	private Long id;
 	private String nome;
 	private String categoria;
-	private LocalDate dataLancamento;
 
 	public FilmeDTO() {
 
@@ -21,7 +20,6 @@ public class FilmeDTO {
 		this.id = filme.getId();
 		this.nome = filme.getNome();
 		this.categoria = filme.getCategoria();
-		this.dataLancamento = filme.getDataLancamento();
 	}
 
 	public Long getId() {
@@ -36,10 +34,6 @@ public class FilmeDTO {
 		return categoria;
 	}
 
-	public LocalDate getDataLancamento() {
-		return dataLancamento;
-	}
-
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -50,10 +44,6 @@ public class FilmeDTO {
 
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
-	}
-
-	public void setDataLancamento(LocalDate dataLancamento) {
-		this.dataLancamento = dataLancamento;
 	}
 
 	public static List<FilmeDTO> converter(List<Filme> filmes) {

@@ -39,7 +39,7 @@
 								<div class="input-group mb-3">
 									<input
 										type="text" class="form-control" id="nome"
-										placeholder="Ex.: O Silêncio dos Inocentes" required="required">
+										placeholder="Ex.: A Procura da Felicidade" required="required">
 								</div>
 							</div>
 							
@@ -85,17 +85,6 @@
 										required="required"> 
 								</div>
 							</div>
-	
-							<div class="col-12 col-md-6">
-								<label for="dataLancamento" class="form-label">Data
-									de Lançamento do filme </label>
-								<div class="input-group mb-3">
-									<input type="date" class="form-control"
-										id="dataLancamento"
-										placeholder="Informe a data de Lançamento" required="required">
-								</div>
-							</div>
-							
 							<div class="col-8 col-sm-6 col-md-4 mx-auto mt-2">
 								<button type="button" class="btn btn-outline-mapp w-100" onclick="salvarFilme()">Salvar</button>
 							</div>
@@ -116,16 +105,16 @@
 		crossorigin="anonymous"></script>
 
 	<script type="text/javascript">
+
 		function salvarFilme() {
 			var id = $("#id").val();
 			var nome = $("#nome").val();
 			var categoria = $("#categoria").val();
-			var dataLancamento = $("#DataLancamento").val();
 
 			$.ajax({
 				method : "POST",
-				url : "filmes/salvar",
-				data : JSON.stringify({id : id, nome : nome, categoria : categoria, dataLancamento : dataLancamento}),
+				url : "filmes/",
+				data : JSON.stringify({id : id, nome : nome, categoria : categoria}),
 				contentType : "application/json; charset=utf-8",
 				sucess : function(response) {
 					alert("Filme salvo com sucesso!");

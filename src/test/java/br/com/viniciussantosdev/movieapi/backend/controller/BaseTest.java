@@ -13,6 +13,7 @@ public abstract class BaseTest {
 	@Autowired
 	protected TestRestTemplate restTemplate;
 
+
 	@Autowired
 	protected FilmeRepository filmeRepository;
 

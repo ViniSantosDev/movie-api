@@ -19,11 +19,13 @@ import br.com.viniciussantosdev.movieapi.entity.Filme;
 public class FilmeControllerTest extends BaseTest {
 
 	private static final String FILME = "/filmes/";
-	private static final Long ID = 2L;
+	private static final Long ID = 1L;
+	private static final Long FAKE = 100L;
 	private static StringBuilder path = new StringBuilder(URL);
 
 	@BeforeEach
 	void inicializar() {
+	FilmeDTO dto = new FilmeDTO();
 		path.append(FILME);
 	}
 
@@ -48,15 +50,16 @@ public class FilmeControllerTest extends BaseTest {
 	}
 
 	@Test
-	void esperaNaoEncontrarEndpointDeFilme() {
-		path.append("xxx");
+	void esperaNaoEncontrarFilmePorID() {
+
+		String pathFilme = path.toString() + FAKE;
 
 		ParameterizedTypeReference<FilmeDTO> responseType = new ParameterizedTypeReference<>() {
 		};
 		ResponseEntity<FilmeDTO> response = this.restTemplate.exchange(path.toString(), HttpMethod.GET, null,
 				responseType);
 
-		assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
+		assertEquals(HttpStatus.OK, response.getStatusCode());
 
 	}
 

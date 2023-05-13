@@ -1,6 +1,5 @@
 package br.com.viniciussantosdev.movieapi.entity;
 
-import java.time.LocalDate;
 import java.util.Objects;
 
 import javax.persistence.Column;
@@ -13,64 +12,41 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "filme")
 public class Filme {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	@Column(name = "nome")
-	private String nome;
-	@Column(name = "categoria")
-	private String categoria;
-	@Column(name = "dataLancamento")
-	private LocalDate dataLancamento;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(name = "nome")
+    private String nome;
+    @Column(name = "categoria")
+    private String categoria;
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(categoria, dataLancamento, id, nome);
-	}
+    @Override
+    public int hashCode() {
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Filme other = (Filme) obj;
-		return Objects.equals(categoria, other.categoria) && Objects.equals(dataLancamento, other.dataLancamento)
-				&& Objects.equals(id, other.id) && Objects.equals(nome, other.nome);
-	}
+        return Objects.hash(categoria, id, nome);
+    }
 
-	public Long getId() {
-		return id;
-	}
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Filme other = (Filme) obj;
+        return Objects.equals(categoria, other.categoria)
+                && Objects.equals(id, other.id) && Objects.equals(nome, other.nome);
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public Long getId() {
+        return id;
+    }
+    public String getNome() {
+        return nome;
+    }
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
-	}
-
-	public LocalDate getDataLancamento() {
-		return dataLancamento;
-	}
-
-	public void setDataLancamento(LocalDate dataLancamento) {
-		this.dataLancamento = dataLancamento;
-	}
-
+    public String getCategoria() {
+        return categoria;
+    }
 }

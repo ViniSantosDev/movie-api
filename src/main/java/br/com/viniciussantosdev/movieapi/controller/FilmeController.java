@@ -23,7 +23,7 @@ import javassist.NotFoundException;
 public class FilmeController {
 
 	@Autowired
-	FilmeServices filmeServices;
+	private FilmeServices filmeServices;
 
 	@GetMapping
 	public ResponseEntity<Page<FilmeDTO>> getAllFilme() throws Exception {
@@ -53,8 +53,8 @@ public class FilmeController {
 		}
 	}
 
-	@PostMapping(value = "salvar")
-	public ResponseEntity<FilmeDTO> postFilmes(@RequestBody @Valid FilmeInsertDTO body) throws Exception {
+	@PostMapping()
+	public ResponseEntity<FilmeDTO> postFilmes(@RequestBody FilmeDTO body) {
 		try {
 			FilmeDTO result = filmeServices.postFilmes(body);
 			return ResponseEntity.status(HttpStatus.CREATED).body(result);
@@ -66,7 +66,7 @@ public class FilmeController {
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<FilmeDTO> putFilme(@RequestBody @Valid FilmeUpdateDTO body) throws Exception {
+	public ResponseEntity<FilmeDTO> putFilme(@RequestBody @Valid FilmeDTO body) {
 		try {
 			FilmeDTO result = filmeServices.putFilme(body);
 			return ResponseEntity.status(HttpStatus.OK).body(result);
