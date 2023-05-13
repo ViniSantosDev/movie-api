@@ -1,3 +1,3 @@
 # movie-api
 
-Project using springboot and h2 db.
+Simple Project using springboot and H2 Database (CRUD).
